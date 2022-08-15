@@ -8,6 +8,9 @@ submitBtn.addEventListener("click" , () => {
 
     const userEmail = emailField.value;
     const userPassword = passwordField.value;
-
-    console.log(userEmail, userPassword);
+    if( userEmail === "sontan@baap.com" && userPassword === "secret"){
+        window.location.href = "account.html"
+    } else{
+        alert("Eta tor baaaper account na");
+    }
 })
