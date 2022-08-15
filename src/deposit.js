@@ -7,6 +7,14 @@ depositBtn.addEventListener("click", () => {
     const depositField = document.getElementById("deposit");
     const newDepositAmount = parseFloat(depositField.value);
 
+    // clear the input field
+    depositField.value = " ";
+    
+    if (isNaN(newDepositAmount)) {
+    alert("Please provide a valid number");
+    return;
+   }
+
     // get the deposit total element;
     const depositTotalElement = document.getElementById("total-deposit");
     const previousDepositTotal = parseFloat(depositTotalElement.innerText);
@@ -25,8 +33,7 @@ depositBtn.addEventListener("click", () => {
     // Add the new deposit to the Total Balance
     totalBalance.innerText = currentTotalBalance;
 
-    // clear the input field
-    depositField.value = " ";
+    
 })
 
 
